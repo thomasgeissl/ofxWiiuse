@@ -1,0 +1,15 @@
+wiiuse*
+example*/bin/*
+example*/obj/*
+
+### vim swap files
+*.swp
+*.swo
+
+### OSX specific stuff
+*.DS_Store
+*.AppleDouble
+*.LSOverride
+
+### Win specific stuff
+*$RECYCLE.BIN/
