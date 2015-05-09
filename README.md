@@ -12,7 +12,7 @@ Feel free to contribute.
 
 Installation
 ---
-git clone https://github.com/thomasgeissl/ofxWiiuse.git /path/to/your/openframeworks/addons
+git clone https://github.com/thomasgeissl/ofxWiiuse.git /path/to/your/openframeworks/addons/ofxWiiuse
 
 Known Issues
 ---
