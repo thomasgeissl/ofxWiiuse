@@ -3,7 +3,7 @@ ofxTGWiiuse
 
 Description
 ---
-ofxTGWiiuse is an addon for openframeworks <https://github.com/openframeworks/openframeworks>.
+ofxWiiuse is an addon for openframeworks <https://github.com/openframeworks/openframeworks>.
 It partially wraps the wiiuse library <https://github.com/rpavlik/wiiuse>, a cross platform c++ library that connects with nintedo wii controllers.
 
 The current state is quite experimental and the addon is far from being finished. The buttons should work at least. 
