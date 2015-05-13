@@ -1,4 +1,4 @@
-ofxTGWiiuse
+ofxWiiuse
 ===
 
 Description
