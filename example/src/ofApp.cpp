@@ -130,3 +130,10 @@ void ofApp::onWiiuseMotionEvent(ofxWiiuseMotionEventArgs& args)
     int id = args.first;
     ofBackground(args.second[0], args.second[1], args.second[2]);
 }
+void ofApp::onWiiuseIRTrackingEvent(ofxWiiuseIRTrackingEventArgs& args)
+{
+    int id = args.first;
+    //ofBackground(args.second[0], args.second[1], args.second[2]);
+    float x = args.second.x;
+    float y = args.second.y;
+}

@@ -209,6 +209,22 @@ ofxWiiuse* ofxWiiuse::toggleMotionSensing(int id)
     }
     return this;
 }
+ofxWiiuse* ofxWiiuse::setIRTracking(int id, bool value)
+{
+    if(value == isIRTracking(id))
+    {
+        return this;
+    }
+    if(value)
+    {
+	    wiiuse_set_ir(wiiuse_get_by_id(_wiimotes, OFXWIIUSE_MAX_WIIMOTES, id), 1);
+    }
+    else
+    {
+	    wiiuse_set_ir(wiiuse_get_by_id(_wiimotes, OFXWIIUSE_MAX_WIIMOTES, id), 0);
+    }
+    return this;
+}
 ofxWiiuse* ofxWiiuse::setRumble(int id, bool value)
 {
     if(value)
@@ -289,6 +305,17 @@ ofxWiiuse* ofxWiiuse::setLed(int id, bool value)
 bool ofxWiiuse::isMotionSensing(int id)
 {
     if(WIIUSE_USING_ACC(wiiuse_get_by_id(_wiimotes, OFXWIIUSE_MAX_WIIMOTES, id)))
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+bool ofxWiiuse::isIRTracking(int id)
+{
+    if(WIIUSE_USING_IR(wiiuse_get_by_id(_wiimotes, OFXWIIUSE_MAX_WIIMOTES, id)))
     {
         return true;
     }

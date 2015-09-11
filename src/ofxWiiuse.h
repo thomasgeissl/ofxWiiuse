@@ -27,12 +27,14 @@ public:
 
     ofxWiiuse* setMotionSensing(int id, bool value = true);
     ofxWiiuse* toggleMotionSensing(int id);
+    ofxWiiuse* setIRTracking(int id, bool value = true);
     ofxWiiuse* setRumble(int id, bool value = true);
     ofxWiiuse* toggleRumble(int id);
     ofxWiiuse* setLeds(int id, bool led0 = true, bool led1 = true, bool led2 = true, bool led3 = true);
     ofxWiiuse* setLed(int id, bool value = true);
 
     bool isMotionSensing(int id);
+    bool isIRTracking(int id);
     bool isRumbling(int id);
 
 protected:

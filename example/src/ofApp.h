@@ -25,6 +25,7 @@ public:
     void onWiiuseControlEvent(ofxWiiuseControlEventArgs& args);
     void onWiiuseButtonEvent(ofxWiiuseButtonEventArgs& args);
     void onWiiuseMotionEvent(ofxWiiuseMotionEventArgs& args);
+    void onWiiuseIRTrackingEvent(ofxWiiuseIRTrackingEventArgs& args);
 protected:
 private:
     ofxWiiuse _wiiuse;

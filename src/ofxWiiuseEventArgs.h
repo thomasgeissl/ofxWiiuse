@@ -33,3 +33,5 @@ enum ofxWiiuseControlEventType
 typedef pair<int, ofxWiiuseButtonEventType> ofxWiiuseButtonEventArgs;//(id,type)
 typedef pair<int, ofxWiiuseControlEventType> ofxWiiuseControlEventArgs;//(id,type)
 typedef pair<int, vector<float> > ofxWiiuseMotionEventArgs;//(id,values)
+typedef pair<int, ofVec2f> ofxWiiuseIRTrackingEventArgs;//(id,values)
+
