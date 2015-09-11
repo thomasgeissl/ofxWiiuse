@@ -128,7 +128,7 @@ void ofApp::onWiiuseButtonEvent(ofxWiiuseButtonEventArgs& args)
 void ofApp::onWiiuseMotionEvent(ofxWiiuseMotionEventArgs& args)
 {
     int id = args.first;
-    ofBackground(args.second[0], args.second[1], args.second[2]);
+    ofBackground(args.second.x, args.second.y, args.second.z);
 }
 void ofApp::onWiiuseIRTrackingEvent(ofxWiiuseIRTrackingEventArgs& args)
 {

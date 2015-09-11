@@ -44,7 +44,7 @@ private:
     void handle_disconnect(struct wiimote_t* wm);
     void notifyControlEvent(int deviceId, ofxWiiuseControlEventType type);
     void notifyButtonEvent(int deviceId, ofxWiiuseButtonEventType type);
-    void notifyMotionEvent(int deviceId, vector<float> values);
+    void notifyMotionEvent(int deviceId, ofVec3f values);
 private:
 	wiimote** _wiimotes;
     ofEvent<ofxWiiuseControlEventArgs> _controlEvent;

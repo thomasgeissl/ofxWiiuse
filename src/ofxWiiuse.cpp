@@ -167,10 +167,10 @@ void ofxWiiuse::handle_event(struct wiimote_t* wm)
         notifyButtonEvent(wm->unid, OFXWIIUSE_BUTTON_HOME_RELEASED);
 	}
 	if (WIIUSE_USING_ACC(wm)) {
-        vector<float> values;
-        values.push_back(wm->orient.roll);
-        values.push_back(wm->orient.pitch);
-        values.push_back(wm->orient.yaw);
+        ofVec3f values;
+        values.x = wm->orient.roll;
+        values.y = wm->orient.pitch;
+        values.z = wm->orient.yaw;
         notifyMotionEvent(wm->unid, values);
 		//printf("wiimote roll  = %f [%f]\n", wm->orient.roll, wm->orient.a_roll);
 		//printf("wiimote pitch = %f [%f]\n", wm->orient.pitch, wm->orient.a_pitch);
@@ -342,7 +342,7 @@ void ofxWiiuse::notifyButtonEvent(int deviceId, ofxWiiuseButtonEventType type)
     args.second = type;
     ofNotifyEvent(_buttonEvent, args, this);
 }
-void ofxWiiuse::notifyMotionEvent(int deviceId, vector<float> values)
+void ofxWiiuse::notifyMotionEvent(int deviceId, ofVec3f values)
 {
     ofxWiiuseMotionEventArgs args;
     args.first = deviceId;
